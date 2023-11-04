@@ -30,14 +30,15 @@ export const Book = ({ book }) => {
       toast.error('This book is already taken.!!',{autoClose: 2000,})
     } else {
       setShelf((prevBooks) => [...prevBooks, newBook]);
-      toast.success('This book is added to your bookshelf.!!',{autoClose: 1500,})
+      toast.success('This book is added to your bookshelf.!!',{autoClose: 1700,})
     }
   };
+
 
   return (
     <div className="w-60 border border-slate-200 rounded-lg p-1 flex flex-col space-y-2 justify-between h-[330px] shadow-md overflow-y-scroll">
       <img
-        src={imageLinks?.thumbnail}
+        src={imageLinks ? imageLinks?.thumbnail : process.env.NEXT_PUBLIC_BOOKCOVER}
         alt={title}
         className="object-contain w-full max-h-[180px]"
       />

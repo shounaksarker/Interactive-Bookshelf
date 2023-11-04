@@ -45,7 +45,7 @@ export const Modal=({
 
   return (
     isModalOpen &&
-    singleBookInfo?.imageLinks && (
+    singleBookInfo && (
       <div className="fixed flex items-center justify-center z-50" >
         {/* Modal overlay */}
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-[6px]" ref={inputRef}>
@@ -53,7 +53,7 @@ export const Modal=({
             <div className="flex items-start space-x-4 max-h-[500px]" >
               {/* book cover / image  */}
               <img
-                src={imageLinks?.thumbnail}
+                src={imageLinks?.thumbnail || process.env.NEXT_PUBLIC_BOOKCOVE}
                 alt={title}
                 className="object-fill w-full"
               />
