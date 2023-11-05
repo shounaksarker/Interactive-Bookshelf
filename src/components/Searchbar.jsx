@@ -12,11 +12,11 @@ export const SearchBar = ({ onSearch }) => {
       <input
         type="text"
         placeholder="Search for books"
-        className="border rounded px-2 py-1 !w-full"
+        className="border border-black rounded-lg px-2 py-1 !w-full"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button className="bg-blue-500 text-white px-3 py-1 rounded" onClick={handleSearch}>
+      <button className="bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-700" onClick={handleSearch}>
         Search
       </button>
     </div>

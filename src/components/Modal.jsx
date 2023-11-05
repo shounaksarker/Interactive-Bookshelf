@@ -45,7 +45,7 @@ export const Modal=({
 
   return (
     isModalOpen &&
-    singleBookInfo && (
+    title &&  (
       <div className="fixed flex items-center justify-center z-50" >
         {/* Modal overlay */}
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-[6px]" ref={inputRef}>

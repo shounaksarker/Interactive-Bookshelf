@@ -64,12 +64,12 @@ export const Book = ({ book }) => {
               setModalOpen(true);
               singleBookData(book?.selfLink);
             }}
-            className={`rounded-lg bg-blue-500 text-white px-3 py-1 text-xs`}
+            className={`rounded-lg bg-blue-500 text-white px-3 py-1 text-xs hover:bg-blue-700`}
           >
             Details
           </button>
         )}
-        <button onClick={()=>addToBookshelf(book)} className="rounded-lg bg-green-500 text-white px-3 py-1 text-xs">
+        <button onClick={()=>addToBookshelf(book)} className="rounded-lg bg-green-500 text-white px-3 py-1 text-xs hover:bg-green-700">
           Add to Bookshelf
         </button>
       </div>

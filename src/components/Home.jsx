@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { SearchBar } from "./Searchbar";
 
 export const Home = ({ className, booksDivClass }) => {
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState();
   const [loading, setLoading] = useState(false);
 
   const searchBooks = async (searchTerm) => {
@@ -63,11 +63,19 @@ export const Home = ({ className, booksDivClass }) => {
       <SearchBar onSearch={searchBooks} />
       {loading && <LoadingBike />}
 
+      {searchResults?
       <div className={`flex flex-col items-start flex-wrap md:flex-row  gap-5 md:justify-center !mt-16 ${booksDivClass}`}>
         {searchResults?.map((book, index) => (
           <Book book={book} key={index} />
         ))}
       </div>
+      : 
+      
+        !loading && <div className="min-h-[400px] w-full  flex items-center justify-center">
+          <p className="text-3xl italic font-medium">Wellcome...</p>
+        </div>
+      
+      }
     </div>
   );
 };
