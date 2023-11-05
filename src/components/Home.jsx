@@ -72,7 +72,7 @@ export const Home = ({ className, booksDivClass }) => {
       : 
       
         !loading && <div className="min-h-[400px] w-full  flex items-center justify-center">
-          <p className="text-3xl italic font-medium">Wellcome...</p>
+          <p className="text-3xl italic font-medium">Wellcome... 🌹</p>
         </div>
       
       }
