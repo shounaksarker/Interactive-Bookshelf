@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
-import { SearchBar } from "../components/SearchBar";
 import { LoadingBike } from "./Loader/LoadingBike";
 import { Book } from "./Book";
 import { toast } from "react-toastify";
+import { SearchBar } from "./Searchbar";
 
 export const Home = ({ className, booksDivClass }) => {
   const [searchResults, setSearchResults] = useState([]);
